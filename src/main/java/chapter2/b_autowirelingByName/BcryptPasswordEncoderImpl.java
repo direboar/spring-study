@@ -1,8 +1,5 @@
 package chapter2.b_autowirelingByName;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class BcryptPasswordEncoderImpl implements PasswordEncoder {
 
 	@Override

@@ -32,4 +32,17 @@ public class UserServiceTest {
 				.isEqualTo("SHApassword");
 	}
 
+	@Test
+	public void testRegistByList() {
+		assertThat(testee.registByList("password")).contains("SHApassword")
+				.contains("Bcryptpassword");
+
+	}
+
+	@Test
+	public void testRegistByMap() {
+		assertThat(testee.registByMap("password")).contains("SHApassword")
+				.contains("Bcryptpassword");
+
+	}
 }

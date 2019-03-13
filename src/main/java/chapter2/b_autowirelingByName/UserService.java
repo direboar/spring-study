@@ -1,5 +1,8 @@
 package chapter2.b_autowirelingByName;
 
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -22,6 +25,13 @@ public class UserService {
 	@Lightweight
 	private PasswordEncoder lightweightEncoder;
 
+	// コレクションにまとめてインジェクション。
+	// debugメモ：こうした場合、実際にはPasswordEncoderには３つのBeanが登録される。
+	@Autowired
+	private List<PasswordEncoder> allEncoderList;
+	@Autowired
+	private Map<String, PasswordEncoder> allEncoderMap;
+
 	public String regist(String password) {
 		return passwordEncoder.encodePassword(password);
 	}
@@ -32,6 +42,24 @@ public class UserService {
 
 	public String registByLightweight(String password) {
 		return lightweightEncoder.encodePassword(password);
+	}
+
+	public String registByList(String password) {
+		StringBuilder builder = new StringBuilder();
+		for (PasswordEncoder passwordEncoder : allEncoderList) {
+			builder.append(passwordEncoder.encodePassword(password));
+		}
+		return builder.toString();
+	}
+
+	public String registByMap(String password) {
+		StringBuilder builder = new StringBuilder();
+
+		builder.append(allEncoderMap.get("sha256PasswordEncoder")
+				.encodePassword(password));
+		builder.append(allEncoderMap.get("bcrypt").encodePassword(password));
+
+		return builder.toString();
 	}
 
 }
