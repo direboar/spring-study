@@ -25,8 +25,9 @@ public class UserService {
 	@Lightweight
 	private PasswordEncoder lightweightEncoder;
 
-	// コレクションにまとめてインジェクション。
-	// debugメモ：こうした場合、実際にはPasswordEncoderには３つのBeanが登録される。
+	// コレクションにまとめてインジェクション。２つのBeanがインジェクションされる。
+	// メモ：Beanに@Qualifierと@Lightweightを両方セットすると、2つは別のBeanとして登録される。
+	// そのためコレクションにセットされるBeanの数が増える（３つになる）。気を付ける。
 	@Autowired
 	private List<PasswordEncoder> allEncoderList;
 	@Autowired
@@ -55,8 +56,7 @@ public class UserService {
 	public String registByMap(String password) {
 		StringBuilder builder = new StringBuilder();
 
-		builder.append(allEncoderMap.get("sha256PasswordEncoder")
-				.encodePassword(password));
+		builder.append(allEncoderMap.get("sha256PasswordEncoder").encodePassword(password));
 		builder.append(allEncoderMap.get("bcrypt").encodePassword(password));
 
 		return builder.toString();
