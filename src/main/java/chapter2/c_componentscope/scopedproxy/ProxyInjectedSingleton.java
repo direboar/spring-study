@@ -12,6 +12,7 @@ public class ProxyInjectedSingleton {
 	@Autowired
 	private PrototypeScopeScopedProxy prototypeScopeScopedProxy;
 
+	// RequestScopeのProxy。シングルトンにインジェクションしても、問題なくリクエスト単位に扱われる。
 	@Autowired
 	private RequestScopeScopedProxyIf requestScopeScopedProxy;
 

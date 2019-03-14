@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Service {
 
-	@Autowired
+	@Autowired // Prototypeなので、Serviceのインスタンスごとに別インスタンス。
 	private Prototype prototype;
 
 	@Autowired

@@ -5,7 +5,8 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 @Component
-//ScopedProxyを設定。（Interfaceか実装クラスかで、ScopedProxyModeの設定値を変える。インタフェースがある場合は、JDKProxyを適用できる。）
+//ScopedProxyを設定。（Interfaceか実装クラスかで、ScopedProxyModeの設定値を変える。
+//インタフェースがある場合は、JDKProxyを適用できる。）
 @Scope(value = "request", proxyMode = ScopedProxyMode.INTERFACES)
 public class RequestScopeScopedProxy implements RequestScopeScopedProxyIf {
 
