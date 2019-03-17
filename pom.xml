@@ -11,8 +11,9 @@
 
 	<properties>
 		<jmockit.version>1.45</jmockit.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 	</properties>
-
 	<dependencyManagement>
 		<dependencies>
 			<dependency>
@@ -26,7 +27,7 @@
 	</dependencyManagement>
 
 	<dependencies>
-	    <!-- for spring mvc. -->
+		<!-- for spring mvc. -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
@@ -67,7 +68,7 @@
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
 
-		<!-- jUnit繧医ｊ蜈医↓隱ｭ縺ｿ霎ｼ縺ｾ繧後ｋ繧医≧縺ｫ縺吶ｋ -->
+		<!-- jUnitより先に設定 -->
 		<dependency>
 			<groupId>org.jmockit</groupId>
 			<artifactId>jmockit</artifactId>
