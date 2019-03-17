@@ -14,7 +14,7 @@ import org.springframework.beans.factory.annotation.Qualifier;
 @Documented
 @Inherited
 @Qualifier
-// アノテーションでインジェクションするCDIを指定する方法。
+// 繧｢繝弱ユ繝ｼ繧ｷ繝ｧ繝ｳ縺ｧ繧､繝ｳ繧ｸ繧ｧ繧ｯ繧ｷ繝ｧ繝ｳ縺吶ｋCDI繧呈欠螳壹☆繧区婿豕輔�
 public @interface Lightweight {
 
 }

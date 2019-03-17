@@ -23,8 +23,8 @@ public class PrototypePosessingSingletonBeanTest {
 	@Test
 	public void test() {
 		assertThat(testee.count()).isEqualTo(1);
-		// PrototypePosessingSingletonBean‚ª•Û‚·‚éPrototypeBean‚ÍAe‚ÌSingletonScope‚É‚È‚é‚½‚ßA–ß‚è’l‚Íinclement‚³‚ê‚éB
-		// iPrototypeBean‚Ìó‘Ô‚ÍƒNƒŠƒA‚³‚ê‚È‚¢j
+		// PrototypePosessingSingletonBeanãŒä¿æŒã™ã‚‹PrototypeBeanã¯ã€è¦ªã®SingletonScopeã«ãªã‚‹ãŸã‚ã€æˆ»ã‚Šå€¤ã¯inclementã•ã‚Œã‚‹ã€‚
+		// ï¼ˆPrototypeBeanã®çŠ¶æ…‹ã¯ã‚¯ãƒªã‚¢ã•ã‚Œãªã„ï¼‰
 		assertThat(testee2.count()).isEqualTo(2);
 	}
 

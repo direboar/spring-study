@@ -1,4 +1,4 @@
 /**
- * Component“o˜^‚ÌŠî–{
+ * Componentç™»éŒ²ã®åŸºæœ¬
  */
 package chapter2.a_components;

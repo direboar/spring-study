@@ -6,13 +6,13 @@ import org.springframework.stereotype.Component;
 @Component
 public class ProxyInjectedSingleton {
 
-	// prototype��proxy��ݒ肵���ꍇ�A�����I�ɕێ����Ă���̂�Proxy�Ȃ̂Łi���Ǝv���j�A
-	// �Ăяo���s�x�ʃC���X�^���X�ɂȂ�B����͎g���Â炢�����ŁASpring��
-	// proxy�̐ݒ��request,session,globalsession�ɑ΂���K�p�𐄏����Ă���B
+	// prototypeにproxyを設定した場合、内部的に保持しているのがProxyなので（だと思う）、
+	// 呼び出し都度別インスタンスになる。これは使いづらい挙動で、Springは
+	// proxyの設定はrequest,session,globalsessionに対する適用を推奨している。
 	@Autowired
 	private PrototypeScopeScopedProxy prototypeScopeScopedProxy;
 
-	// RequestScope��Proxy�B�V���O���g���ɃC���W�F�N�V�������Ă��A���Ȃ����N�G�X�g�P�ʂɈ�����B
+	// RequestScopeのProxy。シングルトンにインジェクションしても、問題なくリクエスト単位に扱われる。
 	@Autowired
 	private RequestScopeScopedProxyIf requestScopeScopedProxy;
 

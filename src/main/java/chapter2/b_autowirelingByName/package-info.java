@@ -1,4 +1,4 @@
 /**
- * ���O�A�A�m�e�[�V�����ɂ��C���W�F�N�V��������сA�R���N�V�����ł܂Ƃ߂Ď����@
+ * 名前、アノテーションによるインジェクションおよび、コレクションでまとめて取る方法
  */
 package chapter2.b_autowirelingByName;

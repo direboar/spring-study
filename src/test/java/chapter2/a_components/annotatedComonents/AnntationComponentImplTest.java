@@ -11,14 +11,14 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import chapter2.a_components.AppConfig;
 import chapter2.a_components.annotation.AnnotationComponent;
 
-// Chapter8 SpringTest‚ÌƒTƒ“ƒvƒ‹B
+// Chapter8 SpringTestã®ã‚µãƒ³ãƒ—ãƒ«ã€‚
 
-// AppConfig‚ğ—LŒø‚É‚µ‚ÄABean‚ÌƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“‚ğ—LŒø‚É‚·‚éB
+// AppConfigã‚’æœ‰åŠ¹ã«ã—ã¦ã€Beanã®ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ã‚’æœ‰åŠ¹ã«ã™ã‚‹ã€‚
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
 public class AnntationComponentImplTest {
 
-	// ƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“‚Å‚«‚éB
+	// ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ã§ãã‚‹ã€‚
 	@Autowired
 	AnnotationComponent testee;
 

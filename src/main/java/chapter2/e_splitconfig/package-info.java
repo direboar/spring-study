@@ -1,4 +1,4 @@
 /**
- * Config•ªŠ„
+ * Configåˆ†å‰²
  */
 package chapter2.e_splitconfig;

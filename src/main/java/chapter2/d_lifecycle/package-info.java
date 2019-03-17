@@ -1,4 +1,4 @@
 /**
- * ライフサイクル
+ * 繝ｩ繧､繝輔し繧､繧ｯ繝ｫ
  */
 package chapter2.d_lifecycle;

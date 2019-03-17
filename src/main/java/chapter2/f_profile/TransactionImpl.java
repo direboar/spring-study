@@ -4,12 +4,12 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Component;
 
 @Component
-@Profile("prod") // Component‚ÉProfile‚Ì•t—^‚à‰Â”\B
+@Profile("prod") // Componentã«Profileã®ä»˜ä¸ã‚‚å¯èƒ½ã€‚
 public class TransactionImpl implements Transaction {
 
 	@Override
 	public boolean start() {
-		// TODO ©“®¶¬‚³‚ê‚½ƒƒ\ƒbƒhEƒXƒ^ƒu
+		// TODO è‡ªå‹•ç”Ÿæˆã•ã‚ŒãŸãƒ¡ã‚½ãƒƒãƒ‰ãƒ»ã‚¹ã‚¿ãƒ–
 		return true;
 	}
 

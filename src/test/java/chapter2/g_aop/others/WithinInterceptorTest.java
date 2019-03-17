@@ -1,4 +1,4 @@
-package chapter2.g_aop.hello;
+package chapter2.g_aop.others;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -10,20 +10,22 @@ import chapter2.g_aop.AppConfig;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
-//メソッド開始：void chapter2.g_aop.hello.UserServiceImpl.hello() と出力される。
-public class UserServiceImplTest {
+public class WithinInterceptorTest {
 
 	@Autowired
-	private UserServiceImpl testee;
+	private FooService service;
+
+	@Autowired
+	private Hoge hoge;
 
 	@Test
-	public void testHello() {
-		testee.hello();
+	public void testHoge() {
+		hoge.hoge();
 	}
 
 	@Test
-	public void testException() {
-		testee.exception();
+	public void testService() {
+		service.hello();
 	}
 
 }

@@ -15,46 +15,47 @@ import org.springframework.stereotype.Component;
 @Component
 public class MethodStartLoggingAspect {
 
-	@Before("execution(* *..*ServiceImpl.*(..))") // ƒNƒ‰ƒX–¼‚ªServiceImpl‚ÅI‚í‚é‚·‚×‚Ä‚ÌComponentƒƒ\ƒbƒhŒÄ‚Ño‚µ‘O‚ğPointCut‚Æ‚µ‚Äw’èB
+	@Before("execution(* *..*ServiceImpl.*(..))") // ã‚¯ãƒ©ã‚¹åãŒServiceImplã§çµ‚ã‚ã‚‹ã™ã¹ã¦ã®Componentãƒ¡ã‚½ãƒƒãƒ‰å‘¼ã³å‡ºã—å‰ã‚’PointCutã¨ã—ã¦æŒ‡å®šã€‚
 	public void startLog(JoinPoint jp) {
-		System.out.println("ƒƒ\ƒbƒhŠJn(@Before)F" + jp.getSignature());
+		System.out.println("ãƒ¡ã‚½ãƒƒãƒ‰é–‹å§‹(@Before)ï¼š" + jp.getSignature());
 	}
 
-	// –¼‘O•t‚«ƒ|ƒCƒ“ƒgƒJƒbƒgB’è‹`‚ğÄ—˜—p‚·‚éB
+	// åå‰ä»˜ããƒã‚¤ãƒ³ãƒˆã‚«ãƒƒãƒˆã€‚å®šç¾©ã‚’å†åˆ©ç”¨ã™ã‚‹ã€‚
+	// Pointcutã‚’å†åˆ©ç”¨ã™ã‚‹å ´åˆã¯@PointCutã§å®šç¾©ã€‚ãã®ä»–ã¯@Beforeç­‰ã«ç›´æ¥å®šç¾©ã€‚
 	@Pointcut("execution(* *..*ServiceImpl.*(..))")
 	public void service() {
 	}
 
 	@AfterReturning(value = "service()", returning = "retVal")
-	// —áŠO‚ª”­¶‚µ‚È‚¢ê‡‚¾‚¯ŒÄ‚Î‚ê‚é
+	// ä¾‹å¤–ãŒç™ºç”Ÿã—ãªã„å ´åˆã ã‘å‘¼ã°ã‚Œã‚‹
 	public void endLogAfterReturning(JoinPoint jp, String retVal) {
-		System.out.println("ƒƒ\ƒbƒhI—¹(@AfterReturning)F" + jp.getSignature() + ",–ß‚è’lF" + retVal);
+		System.out.println("ãƒ¡ã‚½ãƒƒãƒ‰çµ‚äº†(@AfterReturning)ï¼š" + jp.getSignature() + ",æˆ»ã‚Šå€¤ï¼š" + retVal);
 	}
 
 	@AfterThrowing(value = "service()", throwing = "e")
-	// —áŠO‚ª”­¶‚µ‚½ê‡‚¾‚¯ŒÄ‚Î‚ê‚é
+	// ä¾‹å¤–ãŒç™ºç”Ÿã—ãŸå ´åˆã ã‘å‘¼ã°ã‚Œã‚‹
 	public void errorLog(JoinPoint jp, RuntimeException e) {
-		System.out.println("—áŠO”­¶(@AfterThrowing)F" + jp.getSignature());
-		Object target = jp.getTarget(); // Proxy‚ğ‚Í‚ª‚µ‚½À‘Ì‚ÌƒIƒuƒWƒFƒNƒg‚ªæ‚ê‚é
-		Object that = jp.getThis(); // ProxyiCGILIB‚É‚æ‚éj‚ªæ‚ê‚é
+		System.out.println("ä¾‹å¤–ç™ºç”Ÿ(@AfterThrowing)ï¼š" + jp.getSignature());
+		Object target = jp.getTarget(); // Proxyã‚’ã¯ãŒã—ãŸå®Ÿä½“ã®ã‚ªãƒ–ã‚¸ã‚§ã‚¯ãƒˆãŒå–ã‚Œã‚‹
+		Object that = jp.getThis(); // Proxyï¼ˆCGILIBã«ã‚ˆã‚‹ï¼‰ãŒå–ã‚Œã‚‹
 		e.printStackTrace();
 	}
 
 	@After("service()")
-	// —áŠO‚ª”­¶‚µ‚Ä‚àŒÄ‚Î‚ê‚é
+	// ä¾‹å¤–ãŒç™ºç”Ÿã—ã¦ã‚‚å‘¼ã°ã‚Œã‚‹
 	public void endLogAfter(JoinPoint jp) {
-		System.out.println("ƒƒ\ƒbƒhI—¹(@After)F" + jp.getSignature());
+		System.out.println("ãƒ¡ã‚½ãƒƒãƒ‰çµ‚äº†(@After)ï¼š" + jp.getSignature());
 	}
 
 	@Around("service()")
 	public Object logAround(ProceedingJoinPoint jp) throws Throwable {
-		System.out.println("ƒƒ\ƒbƒhŠJn(@Around)F" + jp.getSignature());
+		System.out.println("ãƒ¡ã‚½ãƒƒãƒ‰é–‹å§‹(@Around)ï¼š" + jp.getSignature());
 		try {
 			Object retVal = jp.proceed();
-			System.out.println("ƒƒ\ƒbƒhI—¹(@Around)F" + jp.getSignature());
+			System.out.println("ãƒ¡ã‚½ãƒƒãƒ‰çµ‚äº†(@Around)ï¼š" + jp.getSignature());
 			return retVal;
 		} catch (Throwable e) {
-			System.out.println("—áŠO”­¶(@Around)F" + jp.getSignature());
+			System.out.println("ä¾‹å¤–ç™ºç”Ÿ(@Around)ï¼š" + jp.getSignature());
 			e.printStackTrace(System.out);
 			throw e;
 		}

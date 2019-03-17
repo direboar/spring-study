@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("prod") // プロダクション用プロファイル
+@Profile("prod") // 繝励Ο繝繧ｯ繧ｷ繝ｧ繝ｳ逕ｨ繝励Ο繝輔ぃ繧､繝ｫ
 public class ProdConfig {
 
 	@Bean

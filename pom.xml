@@ -67,7 +67,7 @@
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
 
-		<!-- jUnitより先に読み込まれるようにする -->
+		<!-- jUnit繧医ｊ蜈医↓隱ｭ縺ｿ霎ｼ縺ｾ繧後ｋ繧医≧縺ｫ縺吶ｋ -->
 		<dependency>
 			<groupId>org.jmockit</groupId>
 			<artifactId>jmockit</artifactId>

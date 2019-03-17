@@ -5,7 +5,7 @@ import org.springframework.context.annotation.ScopedProxyMode;
 import org.springframework.stereotype.Component;
 
 @Component
-//ScopedProxy‚ğİ’èBiInterface‚©À‘•ƒNƒ‰ƒX‚©‚ÅAScopedProxyMode‚Ìİ’è’l‚ğ•Ï‚¦‚éB‚±‚Ìê‡ƒNƒ‰ƒX‚È‚Ì‚ÅCGLIB“K—pBj
+//ScopedProxyã‚’è¨­å®šã€‚ï¼ˆInterfaceã‹å®Ÿè£…ã‚¯ãƒ©ã‚¹ã‹ã§ã€ScopedProxyModeã®è¨­å®šå€¤ã‚’å¤‰ãˆã‚‹ã€‚ã“ã®å ´åˆã‚¯ãƒ©ã‚¹ãªã®ã§CGLIBé©ç”¨ã€‚ï¼‰
 @Scope(value = "prototype", proxyMode = ScopedProxyMode.TARGET_CLASS)
 public class PrototypeScopeScopedProxy {
 

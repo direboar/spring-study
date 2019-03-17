@@ -6,11 +6,11 @@ import org.springframework.stereotype.Component;
 import chapter2.c_componentscope.Prototype;
 
 @Component
-//prototypeƒXƒR[ƒv‚ğ•Û‚µ‚Ä‚¢‚éSingletonBeanB
+//prototypeã‚¹ã‚³ãƒ¼ãƒ—ã‚’ä¿æŒã—ã¦ã„ã‚‹SingletonBeanã€‚
 public class PrototypePosessingSingletonBean {
 
 	@Autowired
-	// Prototype‚ÍProxy‚Å‚Í‚È‚¢‚Ì‚ÅAPrototypePosessingSingletonBean‚Ìƒ‰ƒCƒtƒTƒCƒNƒ‹‚Æˆê’v‚·‚éB
+	// Prototypeã¯Proxyã§ã¯ãªã„ã®ã§ã€PrototypePosessingSingletonBeanã®ãƒ©ã‚¤ãƒ•ã‚µã‚¤ã‚¯ãƒ«ã¨ä¸€è‡´ã™ã‚‹ã€‚
 	private Prototype prototype;
 
 	public int count() {

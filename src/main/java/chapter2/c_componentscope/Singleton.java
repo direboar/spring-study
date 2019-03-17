@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("singleton") // Scope��t�^���Ȃ��ꍇ�A�f�t�H���g�̓V���O���g���ɂȂ�B
+@Scope("singleton") // Scopeを付与しない場合、デフォルトはシングルトンになる。
 public class Singleton {
 
 	private int count;

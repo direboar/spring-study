@@ -4,9 +4,9 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-// JavaベースのConfiguration
+// Java繝吶�ｼ繧ｹ縺ｮConfiguration
 @Configuration
-// コンポーネントスキャンを有効にする
+// 繧ｳ繝ｳ繝昴�ｼ繝阪Φ繝医せ繧ｭ繝｣繝ｳ繧呈怏蜉ｹ縺ｫ縺吶ｋ
 @ComponentScan("chapter2.a_components")
 public class AppConfig {
 

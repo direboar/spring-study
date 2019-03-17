@@ -1,4 +1,4 @@
 /**
- * ÉXÉRÅ[Év
+ * „Çπ„Ç≥„Éº„Éó
  */
 package chapter2.c_componentscope;

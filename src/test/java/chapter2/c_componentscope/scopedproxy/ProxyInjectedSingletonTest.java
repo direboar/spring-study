@@ -14,7 +14,7 @@ import chapter2.c_componentscope.AppConfig;
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
 
-//request,sessionƒXƒR[ƒv‚ÌƒeƒXƒg‚ğJUnit‚Ås‚¤ê‡‚ÉAİ’è•K—vB
+//request,sessionã‚¹ã‚³ãƒ¼ãƒ—ã®ãƒ†ã‚¹ãƒˆã‚’JUnitã§è¡Œã†å ´åˆã«ã€è¨­å®šå¿…è¦ã€‚
 //@see https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/testing.html#testcontext-web-scoped-beans
 @WebAppConfiguration
 public class ProxyInjectedSingletonTest {
@@ -28,14 +28,14 @@ public class ProxyInjectedSingletonTest {
 	@Test
 	public void testDelegetePrototypeScopeScopedProxy() {
 		assertThat(testee.delegetePrototypeScopeScopedProxy()).isEqualTo(1);
-		assertThat(testee.delegetePrototypeScopeScopedProxy()).isEqualTo(1); // prototype‚Ìproxy‚ÍŒÄ‚Ño‚µ“s“xƒCƒ“ƒXƒ^ƒ“ƒX‚ª•Ê‚É‚È‚é‚½‚ßB
+		assertThat(testee.delegetePrototypeScopeScopedProxy()).isEqualTo(1); // prototypeã®proxyã¯å‘¼ã³å‡ºã—éƒ½åº¦ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒåˆ¥ã«ãªã‚‹ãŸã‚ã€‚
 	}
 
 	@Test
 	public void testDelegeteRequestScopeScopedProxy() {
 		assertThat(testee.delegeteRequestScopeScopedProxy()).isEqualTo(1);
-		assertThat(testee.delegeteRequestScopeScopedProxy()).isEqualTo(2); // requestƒXƒR[ƒv‚Ìproxy‚ÍƒŠƒNƒGƒXƒg’PˆÊ‚Æ‚È‚é‚½‚ß
-		assertThat(testee2.delegeteRequestScopeScopedProxy()).isEqualTo(3); // proxy‚ğ•Û‚·‚éComponent‚ÌƒXƒR[ƒv‚É‚ÍˆË‘¶‚µ‚È‚¢‚½‚ß
+		assertThat(testee.delegeteRequestScopeScopedProxy()).isEqualTo(2); // requestã‚¹ã‚³ãƒ¼ãƒ—ã®proxyã¯ãƒªã‚¯ã‚¨ã‚¹ãƒˆå˜ä½ã¨ãªã‚‹ãŸã‚
+		assertThat(testee2.delegeteRequestScopeScopedProxy()).isEqualTo(3); // proxyã‚’ä¿æŒã™ã‚‹Componentã®ã‚¹ã‚³ãƒ¼ãƒ—ã«ã¯ä¾å­˜ã—ãªã„ãŸã‚
 	}
 
 }

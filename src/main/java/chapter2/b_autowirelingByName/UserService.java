@@ -16,18 +16,18 @@ public class UserService {
 	@Qualifier("sha256PasswordEncoder")
 	private PasswordEncoder passwordEncoder;
 
-	// “Á’è‚Å‚«‚È‚¢ê‡APrimary‚Åw’è‚µ‚½Component‚ªƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“‚³‚ê‚éB
+	// ç‰¹å®šã§ããªã„å ´åˆã€Primaryã§æŒ‡å®šã—ãŸComponentãŒã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ã•ã‚Œã‚‹ã€‚
 	@Autowired
 	private PasswordEncoder defaultEncoder;
 
-	// ƒAƒmƒe[ƒVƒ‡ƒ“‚ÅƒƒCƒAƒŠƒ“ƒO‚·‚é—áB
+	// ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ã§ãƒ¯ã‚¤ã‚¢ãƒªãƒ³ã‚°ã™ã‚‹ä¾‹ã€‚
 	@Autowired
 	@Lightweight
 	private PasswordEncoder lightweightEncoder;
 
-	// ƒRƒŒƒNƒVƒ‡ƒ“‚É‚Ü‚Æ‚ß‚ÄƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“B‚Q‚Â‚ÌBean‚ªƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“‚³‚ê‚éB
-	// ƒƒ‚FBean‚É@Qualifier‚Æ@Lightweight‚ğ—¼•ûƒZƒbƒg‚·‚é‚ÆA2‚Â‚Í•Ê‚ÌBean‚Æ‚µ‚Ä“o˜^‚³‚ê‚éB
-	// ‚»‚Ì‚½‚ßƒRƒŒƒNƒVƒ‡ƒ“‚ÉƒZƒbƒg‚³‚ê‚éBean‚Ì”‚ª‘‚¦‚éi‚R‚Â‚É‚È‚éjB‹C‚ğ•t‚¯‚éB
+	// ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã«ã¾ã¨ã‚ã¦ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ã€‚ï¼’ã¤ã®BeanãŒã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³ã•ã‚Œã‚‹ã€‚
+	// ãƒ¡ãƒ¢ï¼šBeanã«@Qualifierã¨@Lightweightã‚’ä¸¡æ–¹ã‚»ãƒƒãƒˆã™ã‚‹ã¨ã€2ã¤ã¯åˆ¥ã®Beanã¨ã—ã¦ç™»éŒ²ã•ã‚Œã‚‹ã€‚
+	// ãã®ãŸã‚ã‚³ãƒ¬ã‚¯ã‚·ãƒ§ãƒ³ã«ã‚»ãƒƒãƒˆã•ã‚Œã‚‹Beanã®æ•°ãŒå¢—ãˆã‚‹ï¼ˆï¼“ã¤ã«ãªã‚‹ï¼‰ã€‚æ°—ã‚’ä»˜ã‘ã‚‹ã€‚
 	@Autowired
 	private List<PasswordEncoder> allEncoderList;
 	@Autowired

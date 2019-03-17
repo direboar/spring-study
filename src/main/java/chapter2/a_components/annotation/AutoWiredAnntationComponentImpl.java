@@ -5,26 +5,26 @@ import org.springframework.stereotype.Component;
 
 import chapter2.a_components.UserRepository;
 
-// ƒAƒmƒe[ƒVƒ‡ƒ“ƒx[ƒX‚ÌƒRƒ“ƒ|[ƒlƒ“ƒg
-// ƒI[ƒgƒƒCƒAƒŠƒ“ƒO BY Type‚ÌƒTƒ“ƒvƒ‹B
+// ã‚¢ãƒãƒ†ãƒ¼ã‚·ãƒ§ãƒ³ãƒ™ãƒ¼ã‚¹ã®ã‚³ãƒ³ãƒãƒ¼ãƒãƒ³ãƒˆ
+// ã‚ªãƒ¼ãƒˆãƒ¯ã‚¤ã‚¢ãƒªãƒ³ã‚° BY Typeã®ã‚µãƒ³ãƒ—ãƒ«ã€‚
 @Component
 public class AutoWiredAnntationComponentImpl implements AnnotationComponent {
 
 	private UserRepository userRepository;
 
-	// ƒtƒB[ƒ‹ƒhEƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“
+	// ãƒ•ã‚£ãƒ¼ãƒ«ãƒ‰ãƒ»ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³
 	@Autowired
 	private Hoge hoge;
 
 	private Fuga fuga;
 
-	// ƒRƒ“ƒXƒgƒ‰ƒNƒ^EƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“
+	// ã‚³ãƒ³ã‚¹ãƒˆãƒ©ã‚¯ã‚¿ãƒ»ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³
 	@Autowired
 	public AutoWiredAnntationComponentImpl(UserRepository userRepository) {
 		this.userRepository = userRepository;
 	}
 
-	// ƒZƒbƒ^[EƒCƒ“ƒWƒFƒNƒVƒ‡ƒ“
+	// ã‚»ãƒƒã‚¿ãƒ¼ãƒ»ã‚¤ãƒ³ã‚¸ã‚§ã‚¯ã‚·ãƒ§ãƒ³
 	@Autowired
 	public void setFuga(Fuga fuga) {
 		this.fuga = fuga;

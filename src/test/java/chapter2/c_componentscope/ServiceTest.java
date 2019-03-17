@@ -15,14 +15,14 @@ public class ServiceTest {
 	@Autowired
 	private Service service;
 
-	// Service‚ÍPrototypeƒXƒR[ƒv‚È‚Ì‚ÅA•ÊƒCƒ“ƒXƒ^ƒ“ƒX‚É‚È‚éB
+	// Serviceã¯Prototypeã‚¹ã‚³ãƒ¼ãƒ—ãªã®ã§ã€åˆ¥ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã«ãªã‚‹ã€‚
 	@Autowired
 	private Service service2;
 
 	@Test
 	public void test() {
 		assertThat(service.hello()).isEqualTo(2);
-		// Singleton‚ÍƒCƒ“ƒXƒ^ƒ“ƒX‚ª“¯‚¶BPrototype‚ÍƒCƒ“ƒXƒ^ƒ“ƒXæ“¾–ˆ‚É•Ê¶¬‚³‚ê‚é‚½‚ß‚±‚¤‚È‚é‚Í‚¸
+		// Singletonã¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ãŒåŒã˜ã€‚Prototypeã¯ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹å–å¾—æ¯ã«åˆ¥ç”Ÿæˆã•ã‚Œã‚‹ãŸã‚ã“ã†ãªã‚‹ã¯ãš
 		assertThat(service2.hello()).isEqualTo(3);
 
 	}

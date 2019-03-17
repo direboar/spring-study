@@ -4,7 +4,7 @@ import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Component;
 
 @Component
-@Scope("prototype") // インスタンス取得時に毎回生成される。
+@Scope("prototype") // 繧､繝ｳ繧ｹ繧ｿ繝ｳ繧ｹ蜿門ｾ玲凾縺ｫ豈主屓逕滓�舌＆繧後ｋ縲�
 public class Prototype {
 
 	private int counter = 0;

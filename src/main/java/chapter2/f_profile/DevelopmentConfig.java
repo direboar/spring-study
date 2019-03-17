@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("development") // ŠJ”­—pƒvƒƒtƒ@ƒCƒ‹ iƒƒ\ƒbƒh’PˆÊ‚Ìw’è‚à‰Â”\j
+@Profile("development") // é–‹ç™ºç”¨ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ« ï¼ˆãƒ¡ã‚½ãƒƒãƒ‰å˜ä½ã®æŒ‡å®šã‚‚å¯èƒ½ï¼‰
 public class DevelopmentConfig {
 
 	@Bean

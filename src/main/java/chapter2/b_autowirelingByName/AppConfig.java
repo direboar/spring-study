@@ -11,18 +11,18 @@ import chapter2.b_autowirelingByName.annotation.Lightweight;
 @ComponentScan("chapter2.b_autowirelingByName")
 public class AppConfig {
 
-	// �����C���^�t�F�[�X�ŕ������̂���ꍇ�B
-	// �{�̋L�ڂ̂����Ƃ��ẮA�܂�AppConfig��JavaConfig�ŕʖ��o�^�������������B
+	// 同じインタフェースで複数名称ある場合。
+	// 本の記載のやり方としては、まずAppConfigにJavaConfigで別名登録するやり方がある。
 	@Bean
-	// �J�X�^���E�A�m�e�[�V�����Ŏw�肷�邱�Ƃ��\�B
+	// カスタム・アノテーションで指定することも可能。
 	@Lightweight
 	PasswordEncoder sha256PasswordEncoder() {
 		return new Sha256PasswordEncoderImpl();
 	}
 
-	// Bean���̓f�t�H���g�ł̓��\�b�h���Bname�����Ŏw�肷�邱�Ƃ��\�B
+	// Bean名はデフォルトではメソッド名。name属性で指定することも可能。
 	@Bean(name = "bcrypt")
-	// Primary������ƁA���̂Ńq�b�g���Ȃ������ꍇ�ɗD��I�Ɏg����B
+	// Primaryをつけると、名称でヒットしなかった場合に優先的に使われる。
 	@Primary
 	PasswordEncoder bcryptPasswordEncoder() {
 		return new BcryptPasswordEncoderImpl();

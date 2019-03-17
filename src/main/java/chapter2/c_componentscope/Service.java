@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Scope("prototype")
 public class Service {
 
-	@Autowired // Prototype‚È‚Ì‚ÅAService‚ÌƒCƒ“ƒXƒ^ƒ“ƒX‚²‚Æ‚É•ÊƒCƒ“ƒXƒ^ƒ“ƒXB
+	@Autowired // Prototypeãªã®ã§ã€Serviceã®ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã”ã¨ã«åˆ¥ã‚¤ãƒ³ã‚¹ã‚¿ãƒ³ã‚¹ã€‚
 	private Prototype prototype;
 
 	@Autowired

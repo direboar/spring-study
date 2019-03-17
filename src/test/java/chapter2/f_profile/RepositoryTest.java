@@ -9,9 +9,9 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 /**
- * ƒvƒƒtƒ@ƒCƒ‹‚Ìİ’èB
+ * ãƒ—ãƒ­ãƒ•ã‚¡ã‚¤ãƒ«ã®è¨­å®šã€‚
  * <p>
- * -Dspring.profiles.active=development‚ğ‚Â‚¯‚ÄÀs‚·‚éB À‰^—p‚ÌÚ×‚ÍAp56QÆB
+ * -Dspring.profiles.active=developmentã‚’ã¤ã‘ã¦å®Ÿè¡Œã™ã‚‹ã€‚ å®Ÿé‹ç”¨ã®è©³ç´°ã¯ã€p56å‚ç…§ã€‚
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = AppConfig.class)
