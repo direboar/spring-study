@@ -17,22 +17,30 @@ public class ResourceLoaderSampleTest {
 
 	@Test
 	public void testLoadYahooPage() {
-		assertThat(testee.loadYahooPage()).isNotNull();
+		assertThat(testee
+			.loadYahooPage())
+				.isNotNull();
 	}
 
 	@Test
 	public void testLoadPropertyFileByClasspath() {
-		assertThat(testee.loadPropertyFileByClasspath()).isNotNull();
+		assertThat(testee
+			.loadPropertyFileByClasspath())
+				.isNotNull();
 	}
 
 	@Test
 	public void testLoadGooglePage() {
-		assertThat(testee.loadGooglePage()).isNotNull();
+		assertThat(testee
+			.loadGooglePage())
+				.isNotNull();
 	}
 
 	@Test
 	public void testLoadAllPropertyFileByClasspath() {
-		assertThat(testee.loadAllPropertyFileByClasspath()).hasSize(2);
+		assertThat(testee
+			.loadAllPropertyFileByClasspath())
+				.hasSize(2);
 
 	}
 }

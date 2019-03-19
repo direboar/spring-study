@@ -68,6 +68,12 @@
 			<artifactId>aspectjweaver</artifactId>
 		</dependency>
 
+		<!-- for spring jdbc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+		</dependency>
+
 		<!-- jUnitより先に設定 -->
 		<dependency>
 			<groupId>org.jmockit</groupId>
@@ -90,6 +96,12 @@
 			<artifactId>assertj-core</artifactId>
 			<version>3.12.1</version>
 			<scope>test</scope>
+		</dependency>
+
+		<!-- https://mvnrepository.com/artifact/com.h2database/h2 -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
 		</dependency>
 
 	</dependencies>
